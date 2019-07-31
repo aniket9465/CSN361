@@ -4,7 +4,7 @@
 #include <netinet/in.h>
 #include <string.h>
 #include <bits/stdc++.h>
-using namespace std;
+using namespace std; 
 int main()
 {
     struct ifreq ifr;
@@ -17,7 +17,7 @@ int main()
 
     ifc.ifc_len = sizeof(buf);
     ifc.ifc_buf = buf;
-    if (ioctl(sock, SIOCGIFCONF, &ifc) == -1) { /* handle error */ }
+    if (ioctl(sock, SIOCGIFCONF, &ifc) == -1) { cout<<"Error";return 0; }
 
     struct ifreq* it = ifc.ifc_req;
     const struct ifreq* const end = it + (ifc.ifc_len / sizeof(struct ifreq));
@@ -32,11 +32,14 @@ int main()
                 }
             }
         }
-        else { /* handle error */ }
+        else { 
+            cout<<"Error";
+            return 0;
+         }
     }
 
     unsigned char mac_address[6];
 
     if (success) memcpy(mac_address, ifr.ifr_hwaddr.sa_data, 6);
-    printf("MAC ADDRESS : %0x:%0x:%0x:%0x:%0x:%0x\n",mac_address[0],mac_address[1],mac_address[2],mac_address[3],mac_address[4],mac_address[5] );
+    printf("MAC ADDRESS : %02x:%02x:%02x:%02x:%02x:%02x\n",mac_address[0],mac_address[1],mac_address[2],mac_address[3],mac_address[4],mac_address[5] );
 }

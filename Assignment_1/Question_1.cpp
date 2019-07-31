@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 #include <sys/types.h>
 #include <unistd.h>
-using namespace std;
+using namespace std; 
 int main()
 {
 	for(int i=0;i<2;++i)
