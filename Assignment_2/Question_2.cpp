@@ -8,15 +8,16 @@ int main()
 	if(fork()==0)
 	{
 		sleep(2);
-		cout<<"\nThis is an orphan process\n";
+		cout<<"\nParent is an orphan process as grandparent is finished "<<getpid()<<"\n";
 		if(fork()==0)
 		{
-			cout<<"Child finished\n";
+			cout<<"Child finished "<<getpid()<<"\n";
 			return 0;
 		}
+		sleep(1);
+		cout<<"Child process is a zombie process as parent is sleeping\n";
 		sleep(2);
-		cout<<"Child process is a zombie process\n";
 		return 0;
 	}
-	cout<<"parent finished\n";
+	cout<<"grandparent finished "<<getpid()<<"\n";
 }
