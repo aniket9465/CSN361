@@ -1,0 +1,39 @@
+\hypertarget{_question__1_8cpp}{}\section{Question\+\_\+1.\+cpp File Reference}
+\label{_question__1_8cpp}\index{Question\+\_\+1.\+cpp@{Question\+\_\+1.\+cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\\*
+Include dependency graph for Question\+\_\+1.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{_question__1_8cpp_afd1e6ce8e418cb5378bdf2f5beae6d0f}{find\+Class} (string str)
+\item 
+void \hyperlink{_question__1_8cpp_a5ffb0f500fe5c9e5f1954ed371875a77}{separate} (string str, char ip\+Class)
+\item 
+int \hyperlink{_question__1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Question\+\_\+1.\+cpp@{Question\+\_\+1.\+cpp}!find\+Class@{find\+Class}}
+\index{find\+Class@{find\+Class}!Question\+\_\+1.\+cpp@{Question\+\_\+1.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Class(string str)}{findClass(string str)}}]{\setlength{\rightskip}{0pt plus 5cm}char find\+Class (
+\begin{DoxyParamCaption}
+\item[{string}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{_question__1_8cpp_afd1e6ce8e418cb5378bdf2f5beae6d0f}{}\label{_question__1_8cpp_afd1e6ce8e418cb5378bdf2f5beae6d0f}
+\index{Question\+\_\+1.\+cpp@{Question\+\_\+1.\+cpp}!main@{main}}
+\index{main@{main}!Question\+\_\+1.\+cpp@{Question\+\_\+1.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_question__1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{_question__1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\index{Question\+\_\+1.\+cpp@{Question\+\_\+1.\+cpp}!separate@{separate}}
+\index{separate@{separate}!Question\+\_\+1.\+cpp@{Question\+\_\+1.\+cpp}}
+\subsubsection[{\texorpdfstring{separate(string str, char ip\+Class)}{separate(string str, char ipClass)}}]{\setlength{\rightskip}{0pt plus 5cm}void separate (
+\begin{DoxyParamCaption}
+\item[{string}]{str, }
+\item[{char}]{ip\+Class}
+\end{DoxyParamCaption}
+)}\hypertarget{_question__1_8cpp_a5ffb0f500fe5c9e5f1954ed371875a77}{}\label{_question__1_8cpp_a5ffb0f500fe5c9e5f1954ed371875a77}

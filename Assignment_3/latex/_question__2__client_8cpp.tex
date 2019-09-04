@@ -1,0 +1,91 @@
+\hypertarget{_question__2__client_8cpp}{}\section{Question\+\_\+2\+\_\+client.\+cpp File Reference}
+\label{_question__2__client_8cpp}\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+Include dependency graph for Question\+\_\+2\+\_\+client.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_question__2__client_8cpp_ac0a4ce3bd388c7823743b526e7cb77fb}{I\+P\+\_\+\+P\+R\+O\+T\+O\+C\+OL}~0
+\item 
+\#define \hyperlink{_question__2__client_8cpp_ad8a262037cbfb38d1512f0073eeb7a66}{I\+P\+\_\+\+A\+D\+D\+R\+E\+SS}~\char`\"{}127.\+0.\+0.\+1\char`\"{}
+\item 
+\#define \hyperlink{_question__2__client_8cpp_a47a4d3bbd05894abbce0ffd1d266aa88}{P\+O\+R\+T\+\_\+\+NO}~15050
+\item 
+\#define \hyperlink{_question__2__client_8cpp_a30ba2113ad1b0f91029d017fc988d9af}{N\+E\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}~32
+\item 
+\#define \hyperlink{_question__2__client_8cpp_abace6f1e028b11cc237bd95c5dbe451a}{cipher\+Key}~\textquotesingle{}S\textquotesingle{}
+\item 
+\#define \hyperlink{_question__2__client_8cpp_a6e618c0ec6ffc8ac4489d11c65a5a67c}{sendrecvflag}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_question__2__client_8cpp_a37e9b2e0b0fcbe7d2d5bd9c9467c1fb8}{clear\+Buf} (char $\ast$b)
+\item 
+char \hyperlink{_question__2__client_8cpp_a4fc6ad5854f646cf1e284f66e104219f}{Cipher} (char ch)
+\item 
+int \hyperlink{_question__2__client_8cpp_a0d285ee71db2ee39e24c4a6e552991f3}{recv\+File} (char $\ast$buf, int s)
+\item 
+int \hyperlink{_question__2__client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!cipher\+Key@{cipher\+Key}}
+\index{cipher\+Key@{cipher\+Key}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{cipher\+Key}{cipherKey}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cipher\+Key~\textquotesingle{}S\textquotesingle{}}\hypertarget{_question__2__client_8cpp_abace6f1e028b11cc237bd95c5dbe451a}{}\label{_question__2__client_8cpp_abace6f1e028b11cc237bd95c5dbe451a}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!I\+P\+\_\+\+A\+D\+D\+R\+E\+SS@{I\+P\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{I\+P\+\_\+\+A\+D\+D\+R\+E\+SS@{I\+P\+\_\+\+A\+D\+D\+R\+E\+SS}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{I\+P\+\_\+\+A\+D\+D\+R\+E\+SS}{IP_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+P\+\_\+\+A\+D\+D\+R\+E\+SS~\char`\"{}127.\+0.\+0.\+1\char`\"{}}\hypertarget{_question__2__client_8cpp_ad8a262037cbfb38d1512f0073eeb7a66}{}\label{_question__2__client_8cpp_ad8a262037cbfb38d1512f0073eeb7a66}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!I\+P\+\_\+\+P\+R\+O\+T\+O\+C\+OL@{I\+P\+\_\+\+P\+R\+O\+T\+O\+C\+OL}}
+\index{I\+P\+\_\+\+P\+R\+O\+T\+O\+C\+OL@{I\+P\+\_\+\+P\+R\+O\+T\+O\+C\+OL}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{I\+P\+\_\+\+P\+R\+O\+T\+O\+C\+OL}{IP_PROTOCOL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+P\+\_\+\+P\+R\+O\+T\+O\+C\+OL~0}\hypertarget{_question__2__client_8cpp_ac0a4ce3bd388c7823743b526e7cb77fb}{}\label{_question__2__client_8cpp_ac0a4ce3bd388c7823743b526e7cb77fb}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!N\+E\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{N\+E\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{N\+E\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{N\+E\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{N\+E\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}{NET_BUF_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+E\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE~32}\hypertarget{_question__2__client_8cpp_a30ba2113ad1b0f91029d017fc988d9af}{}\label{_question__2__client_8cpp_a30ba2113ad1b0f91029d017fc988d9af}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!P\+O\+R\+T\+\_\+\+NO@{P\+O\+R\+T\+\_\+\+NO}}
+\index{P\+O\+R\+T\+\_\+\+NO@{P\+O\+R\+T\+\_\+\+NO}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{P\+O\+R\+T\+\_\+\+NO}{PORT_NO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+R\+T\+\_\+\+NO~15050}\hypertarget{_question__2__client_8cpp_a47a4d3bbd05894abbce0ffd1d266aa88}{}\label{_question__2__client_8cpp_a47a4d3bbd05894abbce0ffd1d266aa88}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!sendrecvflag@{sendrecvflag}}
+\index{sendrecvflag@{sendrecvflag}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{sendrecvflag}{sendrecvflag}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sendrecvflag~0}\hypertarget{_question__2__client_8cpp_a6e618c0ec6ffc8ac4489d11c65a5a67c}{}\label{_question__2__client_8cpp_a6e618c0ec6ffc8ac4489d11c65a5a67c}
+
+
+\subsection{Function Documentation}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!Cipher@{Cipher}}
+\index{Cipher@{Cipher}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{Cipher(char ch)}{Cipher(char ch)}}]{\setlength{\rightskip}{0pt plus 5cm}char Cipher (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}\hypertarget{_question__2__client_8cpp_a4fc6ad5854f646cf1e284f66e104219f}{}\label{_question__2__client_8cpp_a4fc6ad5854f646cf1e284f66e104219f}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!clear\+Buf@{clear\+Buf}}
+\index{clear\+Buf@{clear\+Buf}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{clear\+Buf(char $\ast$b)}{clearBuf(char *b)}}]{\setlength{\rightskip}{0pt plus 5cm}void clear\+Buf (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{_question__2__client_8cpp_a37e9b2e0b0fcbe7d2d5bd9c9467c1fb8}{}\label{_question__2__client_8cpp_a37e9b2e0b0fcbe7d2d5bd9c9467c1fb8}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!main@{main}}
+\index{main@{main}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_question__2__client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{_question__2__client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\index{Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}!recv\+File@{recv\+File}}
+\index{recv\+File@{recv\+File}!Question\+\_\+2\+\_\+client.\+cpp@{Question\+\_\+2\+\_\+client.\+cpp}}
+\subsubsection[{\texorpdfstring{recv\+File(char $\ast$buf, int s)}{recvFile(char *buf, int s)}}]{\setlength{\rightskip}{0pt plus 5cm}int recv\+File (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{_question__2__client_8cpp_a0d285ee71db2ee39e24c4a6e552991f3}{}\label{_question__2__client_8cpp_a0d285ee71db2ee39e24c4a6e552991f3}

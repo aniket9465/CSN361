@@ -26,7 +26,7 @@ for {set i 1} {$i < $N} {incr i} {
     append y " "
     append y "$n($i)"
 }
-$ns make-lan $y 0.5Mb 40ms LL Queue/DropTail Mac/802_3
+set lan0 [$ns newLan $y 1Mb 10ms LL Queue/DropTail MAC/Csma/Cd Channel]
 puts "Enter k: "
 gets stdin k
 for {set i 0} {$i < $k} {incr i} {
