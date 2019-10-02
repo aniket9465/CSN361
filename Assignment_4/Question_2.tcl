@@ -1,5 +1,5 @@
 set ns [new Simulator]
-
+ 
 #Routing Protocol used is Distance Vector
 $ns rtproto DV
 
@@ -42,9 +42,10 @@ $ns duplex-link $node3 $node4 1000Mb 10ms DropTail
 $ns duplex-link $node3 $node5 500Mb 10ms DropTail
 
 
-$ns queue-limit $node0 $node2 5
-$ns queue-limit $node2 $node1 5
-$ns queue-limit $node2 $node3 5
+$ns queue-limit $node0 $node2 51
+$ns queue-limit $node2 $node1 51
+$ns queue-limit $node1 $node2 51
+$ns queue-limit $node2 $node3 51
 $ns queue-limit $node3 $node2 5
 $ns queue-limit $node3 $node4 5
 $ns queue-limit $node5 $node3 5
