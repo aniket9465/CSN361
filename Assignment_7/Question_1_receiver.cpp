@@ -55,6 +55,50 @@ int sendFile(FILE* fp, char* buf, int s)
 } 
   
 
+string CyclicRedundancyCheck(string s,int n,string divisor)
+{
+    if(divisor.length()>n){
+        string rem(divisor.length()-1,'0');
+        for(int i=0;i<s.length();++i)
+        {
+            rem[rem.length()-i-1]=s[s.length()-1-i];
+        }
+        return s+rem;
+    }
+    cout<<s<<" "<<divisor<<endl;
+    string rem=s.substr(0,divisor.length()-1);
+    // cout<<rem<<endl;
+    for(int i=divisor.length()-1;i<n;++i)
+    {
+        string temp=rem+s[i];
+        rem="";
+        cout<<temp<<endl;
+        if(temp[0]=='0')
+        {
+            for(int j=1;j<temp.length();++j)
+            {
+                rem=rem+temp[j];
+            }
+        }
+        else
+        {   
+            for(int j=1;j<temp.length();++j)
+            {
+                if(divisor[j]=='0')
+                    rem=rem+temp[j];
+                else{
+                    if(temp[j]=='0')
+                        rem=rem+"1";
+                    else
+                        rem=rem+"1";
+                }
+            }
+        }
+    }
+    return s+rem;
+}
+
+
 int checksum(string s,int n,int seg)
 {
     int v=0;
@@ -228,7 +272,25 @@ int main()
             case 4:
             {
                 cout<<"Checker Type Cyclic Redundancy Check(CRC)\n";
+                clearBuf(net_buf); 
+                nBytes = recvfrom(sockfd, net_buf, 
+                                  NET_BUF_SIZE, sendrecvflag, 
+                                  (struct sockaddr*)&addr_con, &addrlen); 
 
+                string divisor = string(net_buf);
+                clearBuf(net_buf); 
+                nBytes = recvfrom(sockfd, net_buf, 
+                                  NET_BUF_SIZE, sendrecvflag, 
+                                  (struct sockaddr*)&addr_con, &addrlen); 
+                s=string(net_buf);
+                string val=CyclicRedundancyCheck(s.substr(0,s.length()-divisor.length()+1),s.length()-divisor.length()+1,divisor);
+                cout<<val<<endl;
+                if(val==s)
+                {
+                    error=0;
+                }
+                else
+                    error=1;
             }
             break;
         } 

@@ -76,6 +76,47 @@ string checksum(string s,int n,int seg)
     return s;
 }
 
+string CyclicRedundancyCheck(string s,int n,string divisor)
+{
+    if(divisor.length()>n){
+        string rem(divisor.length()-1,'0');
+        for(int i=0;i<s.length();++i)
+        {
+            rem[rem.length()-i-1]=s[s.length()-1-i];
+        }
+        return s+rem;
+    }
+    string rem=s.substr(0,divisor.length()-1);
+    // cout<<rem<<endl;
+    for(int i=divisor.length()-1;i<n;++i)
+    {
+        string temp=rem+s[i];
+        rem="";
+        if(s[i]=='0')
+        {
+            for(int j=1;j<temp.length();++j)
+            {
+                rem=rem+temp[j];
+            }
+        }
+        else
+        {   
+            for(int j=1;j<temp.length();++j)
+            {
+                if(divisor[j]=='0')
+                    rem=rem+temp[j];
+                else{
+                    if(temp[j]=='0')
+                        rem=rem+"1";
+                    else
+                        rem=rem+"1";
+                }
+            }
+        }
+    }
+    return s+rem;
+}
+
 // driver code 
 int main() 
 { 
@@ -144,7 +185,7 @@ int main()
             break;
             case 2:
             {
-                cout<<"Enter number of segments \n";
+                cout<<"Enter length of segments \n";
                 int seg;
                 cin>>seg;
                 string ss=to_string(seg);
@@ -191,7 +232,7 @@ int main()
             break;
             case 3: 
             {
-                cout<<"Enter number of segments \n";
+                cout<<"Enter length of segment \n";
                 int seg;
                 cin>>seg;
                 string ss=to_string(seg);
@@ -205,7 +246,16 @@ int main()
             break;
             case 4:
             {
-                
+                cout<<"Enter divisor \n";
+                string seg;
+                cin>>seg;
+
+                strcpy(net_buf,seg.c_str());
+
+                sendto(sockfd, net_buf, NET_BUF_SIZE, 
+                       sendrecvflag, (struct sockaddr*)&addr_con, 
+                       addrlen); 
+                s=CyclicRedundancyCheck(s,n,seg);
             }
             break;
 
@@ -236,6 +286,7 @@ int main()
             int d;
             cout<<"Enter number of errors:\n";
             cin>>d;
+            if(d)
             cout<<"Enter index of errors (1 indexing) :\n";
             while(d)
             {
